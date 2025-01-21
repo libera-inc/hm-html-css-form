@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Figmaからのコーディング(タイトル編)</title>
+        <meta name="description" content="ページの説明" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">ご相談・お問い合わせ</h1>
+            <p class="head-text">
+                <span>ご相談やお見積り依頼など、お気軽にお問い合わせください。 </span>
+                <span>通常1日以内にご連絡します。</span>
+            </p>
+
+            <form class="form" method="post" action="">
+                <div class="form-item">
+                    <label for="name" class="label">お名前</label>
+                    <input type="text" name="name" id="name" placeholder="山田 太郎" class="text" />
+                </div>
+
+                <div class="form-item">
+                    <label for="contact" class="label">お問い合わせ内容</label>
+                    <textarea name="contact" id="contact" placeholder="お問い合わせ内容を記入してください。" class="textarea"></textarea>
+                </div>
+
+                <div class="form-item">
+                    <label for="address" class="label">住所</label>
+                    <div class="select-wrap">
+                        <select name="address" id="address" class="select">
+                            <option value="北海道">北海道</option>
+                            <option value="青森県">青森県</option>
+                            <option value="岩手県">岩手県</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="form-item">
+                    <legend class="label">公開設定</legend>
+                    <div class="radio-wrap">
+                        <div class="">
+                            <input type="radio" name="public-settings" value="公開" class="radio" id="public" />
+                            <label class="radio-text" for="public">公開</label>
+                        </div>
+
+                        <div class="">
+                            <input type="radio" name="public-settings" value="非公開" class="radio" id="private" />
+                            <label class="radio-text" for="private">非公開</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-item">
+                    <legend class="label">お問い合わせ項目</legend>
+                    <div class="checkbox-wrap">
+                        <div class="">
+                            <input type="checkbox" name="contact-item" value="資料請求" class="checkbox" id="document" />
+                            <label class="checkbox-text" for="document">資料請求</label>
+                        </div>
+
+                        <div class="">
+                            <input type="checkbox" name="contact-item" value="無料相談" class="checkbox" id="consultation" />
+                            <label class="checkbox-text" for="consultation">無料相談</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
